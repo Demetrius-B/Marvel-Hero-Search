@@ -10,7 +10,7 @@
 
 const input = document.querySelector('input')
 const form = document.querySelector('form')
-const resultsContainer = document.querySelector('section .wrapper')
+const resultsContainer = document.querySelector('section')
 const buttonContainer = document.querySelector('.more')
 const base = `https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&titleStartsWith=`
 const key = "ece84784d501b9d36801c24c742ac9b4"
@@ -46,7 +46,7 @@ form.addEventListener("submit", (e)=> {
   })
 })
 
-function comicName (data) { 
+function comicName (data) {
   let output = "<h1>Results for " + input.value + "</h1>"
   data.forEach((data, index) => {
     if (data.title) {
