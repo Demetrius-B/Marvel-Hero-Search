@@ -83,12 +83,41 @@ body {
 
 header {
   display: flex;
-  height: 8rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
   header img {
     height: 8rem;
     width: 14.2rem; }
+
+.container {
+  display: inline-block;
+  cursor: pointer; }
+  .container .bar1, .container .bar2, .container .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0; }
+
+nav {
+  display: none;
+  background-color: white;
+  justify-content: center;
+  background-color: black;
+  border-top: 0.1rem solid;
+  width: 100%; }
+  nav ul li {
+    text-align: center;
+    padding: 1rem; }
+    nav ul li a {
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: white; }
+      nav ul li a:active {
+        font-weight: 600;
+        color: red; }
 
 .search {
   display: flex;
@@ -99,21 +128,32 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   height: 40vh; }
-  .search form input {
-    width: 90vw;
-    height: 5vh; }
-  .search form p {
-    background-color: black;
-    color: white;
-    font-size: 1.8rem;
-    width: inherit;
-    padding: 1rem; }
-  .search form button {
-    margin-left: -50px;
-    display: block;
-    background-color: black;
-    height: 20px;
-    width: 20px; }
+  .search form {
+    position: relative; }
+    .search form input {
+      width: calc(90vw - 3.7rem);
+      height: 5vh;
+      padding-right: 3.7rem; }
+    .search form p {
+      background-color: black;
+      color: white;
+      font-size: 1.8rem;
+      width: inherit;
+      padding: 0.5rem;
+      text-align: center; }
+    .search form button {
+      margin-left: -16px;
+      height: 3.4rem;
+      width: 3.7rem;
+      background-image: url("../img/search.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 3.4rem 3.4rem;
+      position: absolute;
+      padding: 0;
+      right: 0;
+      bottom: 0;
+      border: 0; }
 
 #resultsContainer {
   display: flex;

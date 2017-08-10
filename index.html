@@ -9,7 +9,14 @@
   <body>
     <header>
         <img src="img/newmlogo.jpg" alt="">
-        <nav>
+
+        <div class="container" onclick="toggle()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <nav id="menu">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#resultsContainer">Results</a></li>
@@ -17,13 +24,15 @@
         </nav>
     </header>
 
-      <div class="search">
-          <form>
-            <p>Search for comics by name</p>
-            <input type="text" placeholder="Search here..." required>
-            <button type="submit"></button>
-          </form>
-        </div>
+
+
+    <div class="search">
+      <form>
+        <p>Search for comics by name</p>
+        <input type="text" placeholder="Search here..." required>
+        <button type="submit"></button>
+      </form>
+    </div>
 
     <section id="resultsContainer">
           <h1>Results for ......</h1>
@@ -44,5 +53,6 @@
     </footer>
 
     <script src="js/api.js"></script>
+    <script src="js/nav_animate.js"></script>
   </body>
 </html>
