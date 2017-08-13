@@ -1,5 +1,4 @@
 // ===== HEADER FOR MOBILE =====
-
 header
   display: flex
   justify-content: space-between
@@ -11,19 +10,6 @@ header
   img
     height: 8rem
     width: 14.2rem
-
-
-.container
-  display: inline-block
-  cursor: pointer
-
-
-  .bar1, .bar2, .bar3
-      width: 35px
-      height: 5px
-      background-color: #333
-      margin: 6px 0
-
 nav
   display: none
   background-color: white
@@ -44,13 +30,33 @@ nav
         font-weight: $bold
         color: $action-color
 
+.container
+  display: inline-block
+  cursor: pointer
+  .bar1, .bar2, .bar3
+      width: 35px
+      height: 5px
+      background-color: #333
+      margin: 6px 0
+
 @media screen and (min-width:426px)
-  .container
-    display: none
+  header
+    .container
+      display: none
+    nav
+      display: flex
+      width: auto
+      ul
+        display: flex
 
-  nav
+@media screen and (min-width:1024px)
+  header
     display: flex
-    width: 25%
-
+    height: 8rem
+    justify-content: space-between
+    img
+      height: 8rem
+    nav
+    display: flex
     ul
       display: flex
