@@ -10,7 +10,8 @@
 
 const input = document.querySelector('input')
 const form = document.querySelector('form')
-const resultsContainer = document.querySelector('section .wrapper')
+const headerContainer = document.querySelector('#resultsContainer')
+const resultsContainer = document.querySelector('.results')
 const buttonContainer = document.querySelector('.more')
 const base = `https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&titleStartsWith=`
 const key = "ece84784d501b9d36801c24c742ac9b4"
@@ -46,8 +47,8 @@ form.addEventListener("submit", (e)=> {
   })
 })
 
-function comicName (data) { 
-  let output = "<h1>Results for " + input.value + "</h1>"
+function comicName (data) {
+  let output = "<div class=results>"
   data.forEach((data, index) => {
     if (data.title) {
       output+= "<article>"
@@ -56,7 +57,11 @@ function comicName (data) {
       output+= "</article>"
     }
   })
+    output+= "</div>"
   let button = "<a href=" + "https://marvel.com/search?q=" + input.value + ">View more on Marvel</a>"
+  let header = "<h1>Results for " + input.value + "</h1>" + output
+
+  headerContainer.innerHTML = header
   resultsContainer.innerHTML = output
   buttonContainer.innerHTML = button
 }
