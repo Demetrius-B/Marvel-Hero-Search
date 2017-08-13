@@ -18,11 +18,11 @@ blockquote, q {
   quotes: none; }
 
 blockquote:before, blockquote:after {
-  content: "";
+  content: '';
   content: none; }
 
 q:before, q:after {
-  content: "";
+  content: '';
   content: none; }
 
 a {
@@ -138,6 +138,7 @@ form {
     width: 500px;
     height: 50px;
     padding-right: 50px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     font-size: 2rem; }
@@ -161,7 +162,7 @@ form {
     background-color: white;
     margin-bottom: 10px;
     font-size: 3rem;
-    padding: 0.625rem 0.9375rem 0.625rem 0.625rem;
+    padding: .625rem .9375rem .625rem .625rem;
     clear: both;
     width: 40rem; }
 
@@ -200,7 +201,7 @@ form {
     text-decoration: none;
     display: inline-block;
     font-size: 1.8rem;
-    border-radius: 0.8rem;
+    border-radius: .8rem;
     margin-top: 2rem;
     font-weight: bold; }
     .more a:hover {
